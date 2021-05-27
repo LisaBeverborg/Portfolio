@@ -1,25 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  template: `
+  selector: 'app-contact',
+  template:`
   <div class="main-content layout">
     <section class="image">
       <img src="assets/img/home-portfolio.jpg">
     </section>
     <section class="text">
-      <h1> Lisa Olde lütke Beverborg</h1>
-      <p>info text about me</p>
+      <h1>Contact me!</h1>
+      <img class=""src="assets/icons/github.png">
+      <img src="assets/icons/linkedin.png">
     </section>
   </div>`,
   styles: [
+    
   ]
 })
-export class HomeComponent implements OnInit {
-  
+export class ContactComponent implements OnInit {
+
   constructor() { }
-  
+
   ngOnInit(): void {
   }
-  
+
 }

@@ -5,7 +5,10 @@ import { Component, OnInit } from '@angular/core';
   template: `
    <img src="assets/img/lisa-logo.png">
   `,
-  styles: [
+  styles: [`
+  img{
+    margin: 0;
+  }`
   ]
 })
 export class HeaderComponent implements OnInit {

@@ -11,16 +11,18 @@ import { map, shareReplay } from 'rxjs/operators';
           [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
           [mode]="(isHandset$ | async) ? 'over' : 'side'"
           [opened]="(isHandset$ | async) === false">
-        <mat-toolbar>Menu</mat-toolbar>
+          <img src="./assets/img/lisa-logo.png">
         <mat-nav-list>
           <a mat-list-item routerLink="">Home</a>
           <a mat-list-item routerLink="tools">Tools</a>
-          <a mat-list-item href="#">Projects</a>
+          <a mat-list-item routerLink="projects">Projects</a>
+          <a mat-list-item routerLink="contact">Contact</a>
         </mat-nav-list>
       </mat-sidenav>
      
-      <mat-sidenav-content class="mobile-header">
-        <div>
+      <mat-sidenav-content >
+
+        <div class="mobile-header">
           <button
             type="button"
             aria-label="Toggle sidenav"
@@ -29,30 +31,26 @@ import { map, shareReplay } from 'rxjs/operators';
             *ngIf="isHandset$ | async">
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
-        </div>
-        <div>
+
           <img *ngIf="isHandset$ | async" src="./assets/img/lisa-logo.png">
         </div>
         <ng-content>  
-        </ng-content>
+      </ng-content>
       </mat-sidenav-content>
-    </mat-sidenav-container>`,
+      
+    </mat-sidenav-container>
+   `,
   styles: [`
     .sidenav-container {
       height: 100%;
     } 
+    .mat-sidenav {
+      background: rgba(242, 231, 201, 1);
+    }
     .sidenav {
       width: 200px;
-    }  
-    .sidenav .mat-toolbar {
-      background: inherit;
-    } 
-    .mat-toolbar.mat-primary {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }    
-  `]
+    }
+   `]
 })
 export class SidenavComponent {
 

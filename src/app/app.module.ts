@@ -12,7 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ToolsComponent } from './components/tools/tools.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidenavComponent} from './components/sidenav/sidenav.component'
+import { SidenavComponent} from './components/sidenav/sidenav.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsComponent } from './components/projects/projects.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { SidenavComponent} from './components/sidenav/sidenav.component'
     HomeComponent,
     ToolsComponent,
     SidenavComponent,
+    ContactComponent,
+    ProjectsComponent,
     
   ],
   imports: [
