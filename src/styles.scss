@@ -34,7 +34,7 @@ $Portfolio-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($Portfolio-theme);
 
-/* You can add global styles to this file, and also import other style files */
+/* global styles */
 
 $champagne: rgba(242, 231, 201, 1);
 $venetian-red: rgba(197, 38, 27, 1);
@@ -43,6 +43,11 @@ $british-racing-green: rgba(0, 61, 35, 1);
 $dark-spring-green: rgba(21, 121, 78, 1);
 $main-font: "Poppins", sans-serif;
 $title-font: "Calligraffitti", cursive;
+
+$light-grey: #ececec;
+$sage-green: #b3be9f;
+
+$linear-gradient: linear-gradient(-90deg, green, white);
 
 html,
 body {
@@ -54,28 +59,51 @@ body {
   font-family: $main-font;
   margin: 0;
 }
+.mat-drawer-content {
+  background-color: $light-grey;
+}
 
-img {
-  max-width: 100%;
-  max-height: 100%;
+section > img {
+  width: clamp(200px, 30vw, 400px);
+  height: clamp(200px, 30vw, 400px);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
   text-align: center;
   font-family: $title-font;
+  font-size: clamp(30px, 2vw, 80px);
 }
 
-p {
+.animated-button {
+  padding: 15px 25px;
+  font-size: 24px;
   text-align: center;
+  cursor: pointer;
+  outline: none;
+  background-color: $dark-spring-green;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-.text {
-  background-color: #688668;
+.animated-button:hover {
+  background-color: #3e8e41;
 }
 
+.animated-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 @media (max-width: 500px) {
+  //general
+
+  /*
   .mat-sidenav-content {
-    background: rgba(242, 231, 201, 1);
+    background: $light-grey;
     margin: 5%;
     margin-bottom: 0%;
   }
@@ -99,10 +127,28 @@ p {
   button {
     margin: 3%;
     margin-bottom: 0%;
+    border: none;
   }
+  
+  old style */
 }
 
 @media (min-width: 600px) {
+  .main-content {
+    width: clamp(800px, 60vw, 1200px);
+    height: clamp(400px, 30vw, 550px);
+    display: flex;
+    margin: auto;
+    position: absolute;
+    top: 40%;
+    transform: translate(0, -50%);
+    right: 10%; //remove to center item
+  }
+
+  .main-content > section {
+    flex: 50%;
+  }
+  /* old style
   .mat-sidenav {
     width: 10vw;
     height: clamp(400px, 30vw, 600px);
@@ -126,11 +172,14 @@ p {
     top: 50%;
     transform: translate(0, -50%);
     right: 0%; //remove to center item
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
   .main-content > section {
     flex: 50%;
   }
+
+  */
   /*
 //section {
 // width: clamp(400px, 60vw, 600px);

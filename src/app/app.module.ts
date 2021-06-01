@@ -5,7 +5,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatListModule} from '@angular/material/list'; 
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,7 +13,12 @@ import { ToolsComponent } from './components/tools/tools.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent} from './components/sidenav/sidenav.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ProjectsComponent } from './components/projects/projects.component'
+import { ProjectsComponent } from './components/projects/projects.component';
+import { InfoService } from './services/info.service';
+
+import  {environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -35,8 +39,10 @@ import { ProjectsComponent } from './components/projects/projects.component'
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    AngularFireModule.initializeApp(environment.firebase, 'Portfolio'),
+    AngularFirestoreModule, 
   ],
-  providers: [],
+  providers: [InfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

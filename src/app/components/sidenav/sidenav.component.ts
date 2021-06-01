@@ -45,10 +45,10 @@ import { map, shareReplay } from 'rxjs/operators';
       height: 100%;
     } 
     .mat-sidenav {
-      background: rgba(242, 231, 201, 1);
+      background: #ececec;
     }
     .sidenav {
-      width: 200px;
+      width: 150px;
     }
    `]
 })
