@@ -11,7 +11,7 @@ import { Info } from '../../models/info';
   <img style="border-radius: 50%;" src="assets/img/home-portfolio.jpg">
   </section>
   <section class="text" >
-  <p style="font-weight: bold; margin-top:20%; ">
+  <p style="font-weight: bold; margin-top:25%; ">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
   Vestibulum vitae vehicula felis, ut posuere augue. Proin consectetur, 
   nulla at malesuada eleifend, enim lectus tincidunt mauris
