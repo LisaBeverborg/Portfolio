@@ -96,10 +96,46 @@ h1 {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
+//contact page
+
 .contact-icons {
   display: flex;
   justify-content: center;
 }
+
+.form-name {
+  width: 50%;
+  height: 50px;
+  position: relative;
+}
+
+.form-name input {
+  width: 100%;
+  height: 100%;
+  //padding-top: 20px;
+  border: none;
+}
+.form-name label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 2px solid black;
+}
+
+.form-name label::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid blue;
+  transform: translate(-100%);
+}
+
 //mobile
 @media (max-width: 500px) {
   //general
