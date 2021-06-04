@@ -14,18 +14,16 @@ import { map, shareReplay } from 'rxjs/operators';
          
        
         <div class="links-list">
-        <img style="padding-left:30px; padding-bottom:5%;"src="./assets/icons/logo.svg">
-        <mat-icon style="filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));"class="icon-color" routerLink="" aria-hidden="false" aria-label="home icon">home</mat-icon>
-        <mat-icon style="filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));"routerLink="tools" aria-hidden="false" aria-label="info icon">info</mat-icon>
-        <mat-icon style="filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));"routerLink="projects" aria-hidden="false" aria-label="folder icon">folder</mat-icon>
-        <mat-icon style="filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));"routerLink="contact" aria-hidden="false" aria-label="contact icon">chat_bubble</mat-icon>
+        <img src="./assets/icons/logo.svg">
+        <a class="sidenav-icon" routerLink=""> <img src="./assets/sidenav-icons/home.png"></a>
+        <a class="sidenav-icon" routerLink="tools"> <img src="./assets/sidenav-icons/backpack.png"></a>
+        <a class="sidenav-icon" routerLink="projects"> <img src="./assets/sidenav-icons/folder.png"></a>
+        <a class="sidenav-icon" routerLink="contact"> <img src="./assets/sidenav-icons/chat.png"></a>
         </div>
-     
-      
       </mat-sidenav>
      
       <mat-sidenav-content >
-
+    
         <div class="mobile-header">
           <button
             type="button"
@@ -35,22 +33,27 @@ import { map, shareReplay } from 'rxjs/operators';
             *ngIf="isHandset$ | async">
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
-          <img *ngIf="isHandset$ | async" src="./assets/icons/logo.svg">
+        
         </div>
+      
         <ng-content>  
       </ng-content>
+    
+     
       </mat-sidenav-content>
+     
     </mat-sidenav-container>
    `,
   styles: [`
-  .mat-icon {
-    font-size: 60px;
+  .sidenav-icon {
     transition: all .2s ease-in-out; 
     cursor:pointer;
   }
-  .mat-icon:hover { 
-    transform: scale(1.1); 
+  
+  .sidenav-icon:hover { 
+    transform: scale(1.3); 
     }
+ 
   .sidenav-container {
     height: 100%;
   } 
@@ -60,13 +63,7 @@ import { map, shareReplay } from 'rxjs/operators';
    `]
 })
 
-/*<div style=" display: block;
-margin-left: 30%;
-margin-right: auto;
-width: 50%;
-margin-top:10%">
-<img src="./assets/icons/logo.svg">
-</div> */
+
 
 /*  <mat-nav-list>
           <a mat-list-item src="assets/icons/home.png" routerLink=""></a>

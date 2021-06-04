@@ -5,10 +5,11 @@ import { Info } from '../../models/info';
 @Component({
   selector: 'app-home',
   template: `
-  <div class="main-content layout">
+  <div class="container">
+  <div class="main-content">
   <section class="image">
   <h1> Lisa Olde lütke Beverborg</h1>
-  <img style="border-radius: 50%;" src="assets/img/home-portfolio.jpg">
+  <img class="home-image" style="border-radius: 50%;" src="assets/img/home-portfolio.jpg">
   </section>
   <section class="text" >
   <p style="font-weight: bold; margin-top:25%; ">
@@ -20,11 +21,11 @@ import { Info } from '../../models/info';
   tellus. Etiam dapibus orci est, eu congue velit viverra ac. Cras urna est, tempus 
   et justo sit amet, dapibus ornare augue. Pellentesque habitant morbi tristique senectus
   et netus et malesuada fames ac turpis egestas. Quisque tincidunt dolor id rhoncus 
-  fringilla. Morbi urna lectus, viverra ac est et, consequat eleifend tellus. Praesent 
-  condimentum consequat est, euismod fermentum lacus facilisis quis
+  fringilla. Morbi urna lectus, viverra ac est et, consequat eleifend tellus. 
   </p>
   <button class="animated-button">check out projects</button>
   </section>
+  </div>
   </div>`,
   // add info from database to homecomponent html
   // <p> {{ infos.introduction }}</p>

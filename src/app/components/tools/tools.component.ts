@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tools',
   template: `
+  <div class="container"> 
   <div class="main-content layout">
     <section class="text">
       <h1> tools in my backpack</h1>
@@ -25,8 +26,9 @@ import { Component, OnInit } from '@angular/core';
         </div>
     </section>
     <section class="image-tools">
-      <img src="assets/icons/backpack.png">
+      <img   src="assets/icons/backpack-tools.png">
     </section>
+  </div>
   </div>`,
 
   //show array of tools
