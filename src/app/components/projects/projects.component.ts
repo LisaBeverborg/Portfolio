@@ -61,6 +61,10 @@ import { Component, OnInit } from '@angular/core';
     * {
       box-sizing: border-box;
     }
+
+    .projects-content > h1{
+      margin-bottom: 0;
+    }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -133,25 +137,24 @@ import { Component, OnInit } from '@angular/core';
     .card__title {
       font-size: 1em;
       margin: 0 0 .3em;
-      color: #6A515E;
+      color:black;
     }
     
     .card__tagline {
       display: block;
       margin: 1em 0;
       font-size: .8em; 
-      color: #D7BDCA;  
     }
     
     .card__status {
       font-size: .8em;
-      color: #D7BDCA;
+      color: black;
     }
     
     .card__description {
       padding: 0 2em 2em;
       margin: 0;
-      color: #D7BDCA;  
+      color: black;  
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;

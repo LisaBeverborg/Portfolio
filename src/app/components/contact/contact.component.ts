@@ -60,7 +60,7 @@ import { Component, OnInit } from '@angular/core';
     
     .form-name{
       width: 70%;
-      height: 50px;
+      height: 70px;
       position: relative;
       overflow: hidden;
     }

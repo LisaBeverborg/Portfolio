@@ -155,6 +155,7 @@ h1 {
   }
   .image-tools {
     padding-bottom: 30px;
+    margin: auto;
   }
 }
 
@@ -195,7 +196,7 @@ h1 {
     justify-content: space-between;
     margin: auto;
     position: relative;
-    top: 30%;
+    top: 32%;
     transform: translate(0, -50%);
   }
 
@@ -208,6 +209,7 @@ h1 {
   .image-tools {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .tools-list > p,
