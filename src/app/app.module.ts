@@ -39,7 +39,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    AngularFireModule.initializeApp(environment.firebase, 'Portfolio'),
+    AngularFireModule.initializeApp(environment.firebase, 'lisa-beverborg'),
     AngularFirestoreModule, 
   ],
   providers: [InfoService],

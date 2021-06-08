@@ -1,3 +1,3 @@
 export interface Info {
-    introduction: string;
+    introduction?: string;
   }

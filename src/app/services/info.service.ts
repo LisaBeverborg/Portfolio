@@ -12,7 +12,7 @@ export class InfoService {
   infos!: Observable<any>;
    
   constructor(public afs: AngularFirestore) {
-    this.infos = this.afs.collection('home').valueChanges();  
+    this.infos = this.afs.collection('info').valueChanges();  
   }
   
   getInfos(){

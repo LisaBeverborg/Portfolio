@@ -2,9 +2,9 @@ export const environment = {
   production: true,
   firebase:{
     apiKey: "...",
-    authDomain: "portfolio-2c955.firebaseapp.com",
-    projectId: "portfolio-2c955",
-    storageBucket: "portfolio-2c955.appspot.com",
+    authDomain: "lisa-beverborg.firebaseapp.com",
+    projectId: "lisa-beverborg",
+    storageBucket: "lisa-beverborg.appspot.com",
     messagingSenderId: "...",
     appId: "...",
     measurementId: "..."

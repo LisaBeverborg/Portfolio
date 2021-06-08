@@ -12,29 +12,19 @@ import { Info } from '../../models/info';
   <img class="home-image" style="border-radius: 50%;" src="assets/img/home-portfolio.jpg">
   </section>
   <section class="text" >
-  <p style="font-weight: bold; margin-top:25%; ">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Vestibulum vitae vehicula felis, ut posuere augue. Proin consectetur, 
-  nulla at malesuada eleifend, enim lectus tincidunt mauris
-  </p>
-  <p>Cras porttitor nec lorem eleifend viverra. Duis eget dignissim nunc, a placerat 
-  tellus. Etiam dapibus orci est, eu congue velit viverra ac. Cras urna est, tempus 
-  et justo sit amet, dapibus ornare augue. Pellentesque habitant morbi tristique senectus
-  et netus et malesuada fames ac turpis egestas. Quisque tincidunt dolor id rhoncus 
-  fringilla. Morbi urna lectus, viverra ac est et, consequat eleifend tellus. 
-  </p>
+  <div *ngFor="let info of infos">
+  <p style="font-weight: bold; margin-top:25%;">{{info.introduction}}</p>
+  </div>
   <button class="animated-button">check out projects</button>
   </section>
   </div>
   </div>`,
-  // add info from database to homecomponent html
-  // <p> {{ infos.introduction }}</p>
   
   styles: []
 })
 export class HomeComponent implements OnInit {
   public infos!: Info;
-   
+  
   constructor(private infoService: InfoService) { }
   
   ngOnInit() {
