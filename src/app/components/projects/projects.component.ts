@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   <section class="cards-projects" >
   <ul class="cards">
   <li>
-    <a href="https://lisabeverborg.github.io/my-games/#/" target="_blank" class="card">
+    <a href="https://lisabeverborg.github.io/my-games/#/memory" target="_blank" rel="noreferrer" class="card">
       <img src="./assets/img/games-project.png" class="card__image" alt="games project" />
       <div class="card__overlay">
         <div class="card__header">
@@ -18,12 +18,12 @@ import { Component, OnInit } from '@angular/core';
             <span class="card__status">HTML, CSS, JS, React, React Bootstrap</span>
           </div>
         </div>
-        <p class="card__description">Games build with React</p>
+        <p class="card__description">Games build with React and a Leaderboard in Firestore</p>
       </div>
     </a>      
   </li>
   <li>
-  <a href="https://lisabeverborg.github.io/weatherapp/" target="_blank" class="card">
+  <a href="https://lisabeverborg.github.io/weatherapp/" target="_blank" rel="noreferrer" class="card">
     <img src="./assets/img/weather-project.png" class="card__image" alt="weather project" />
     <div class="card__overlay">
       <div class="card__header">
@@ -33,27 +33,29 @@ import { Component, OnInit } from '@angular/core';
           <span class="card__status">HTML, CSS, JS, Bootstrap, API</span>
         </div>
       </div>
-      <p class="card__description">Weather app build with the Accu Weather API</p>
+      <p class="card__description">Weather app build with the Accu Weather API and using local storage</p>
     </div>
   </a>      
 </li>
 <li>
-<a href="" class="card">
-  <img src="./assets/img/games-project.png" target="_blank" class="card__image" alt="games project" />
+<a href="https://lisabeverborg.github.io/Javascript-Mini-Projects/" target="_blank" rel="noreferrer" class="card" >
+  <img src="./assets/img/js-project.png" class="card__image" alt="games project"/>
   <div class="card__overlay">
     <div class="card__header">
       <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
       <div class="card__header-text">
         <h3 class="card__title">other</h3>            
-        <span class="card__status">HTML, CSS, JS, React, React Bootstrap</span>
+        <span class="card__status">HTML, CSS, JS Bootstrap</span>
       </div>
     </div>
-    <p class="card__description">other</p>
+    <p class="card__description">Collection of small JavaScript projects. Page in progress</p>
   </div>
 </a>      
 </li>
 </ul>
-<h4>check out more projects on my <a href="https://github.com/LisaBeverborg" target="_blank">github</a></h4>
+<h4 style="text-align:center">check out more projects on my 
+<a style="text-decoration: none; color: black;  border: 2px solid #839A6A; padding: 5px 10px;
+text-align: center; border-radius: 15px;" href="https://github.com/LisaBeverborg" target="_blank" rel="noreferrer">github</a></h4>
   </section>
   </div>`,
   styles: [

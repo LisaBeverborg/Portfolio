@@ -36,19 +36,10 @@ $Portfolio-theme: mat.define-light-theme(
 
 /* global styles */
 
-$champagne: rgba(242, 231, 201, 1);
-$venetian-red: rgba(197, 38, 27, 1);
-$blood-red: rgba(94, 13, 8, 1);
-$british-racing-green: rgba(0, 61, 35, 1);
-$dark-spring-green: rgba(21, 121, 78, 1);
-$light-green: #b8bc86;
+$light-grey: #ececec;
+$light-green: #b1c799;
 $main-font: "Poppins", sans-serif;
 $title-font: "Calligraffitti", cursive;
-
-$light-grey: #ececec;
-$sage-green: #b3be9f;
-
-$linear-gradient: linear-gradient(-90deg, green, white);
 
 html {
   width: 100%;
@@ -72,8 +63,8 @@ body {
 }
 
 .home-image {
-  width: clamp(200px, 30vw, 400px);
-  height: clamp(200px, 30vw, 400px);
+  width: clamp(200px, 30vw, 350px);
+  height: clamp(200px, 30vw, 350px);
   display: block;
   margin: auto auto;
 }
@@ -85,7 +76,8 @@ h1 {
 }
 
 .animated-button {
-  padding: 15px 25px;
+  align-self: center;
+  padding: 8px 25px;
   font-size: clamp(1rem, 2vw, 1.5rem);
   text-align: center;
   cursor: pointer;
@@ -96,17 +88,45 @@ h1 {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
+//animations
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 //mobile
 @media (max-width: 500px) {
   //general
-  .mat-drawer {
-    color: $dark-spring-green;
-    width: 40vw !important;
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    margin: 10%;
   }
 
+  h1 {
+    margin: 0;
+  }
+
+  .home-image {
+    display: block;
+    margin-top: 10%;
+  }
+
+  .animated-button {
+    display: block;
+    margin: auto auto;
+    margin-bottom: 20%;
+  }
+  //sidenav
   .mat-sidenav-content {
     background: $light-grey;
-    //margin: 5%;
     margin-bottom: 0%;
   }
 
@@ -116,40 +136,12 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
     position: relative;
     top: 40%;
     transform: translate(0, -50%);
-    //padding-right: 10%;
   }
 
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    margin: 10%;
-  }
-
-  .home-image {
-    display: block;
-    margin-top: 10%;
-  }
-
-  button {
-    margin: 3%;
-    margin-bottom: 0%;
-    border: none;
-  }
-
-  h1 {
-    margin: 0;
-  }
-
-  .animated-button {
-    margin: auto;
-    margin-bottom: 20%;
-  }
-
+  //tools
   .list-container-tools {
     text-align: center;
   }
@@ -161,7 +153,6 @@ h1 {
 
 @media (min-width: 600px) {
   .mat-drawer {
-    color: $dark-spring-green;
     border-right: 5px solid white;
     width: 12vw !important;
   }
@@ -172,6 +163,7 @@ h1 {
     display: flex;
   }
   .main-content {
+    animation: fadeIn 3s;
     width: clamp(800px, 60vw, 1000px);
     height: clamp(500px, 30vw, 700px);
     display: flex;
@@ -184,6 +176,14 @@ h1 {
 
   .projects-content {
     margin-top: 20%;
+    animation: fadeIn 3s;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // position: relative;
   }
 
   //sidenav
@@ -194,7 +194,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
+    //margin: auto;
     position: relative;
     top: 32%;
     transform: translate(0, -50%);
@@ -223,60 +223,4 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
   }
-
-  /* old style
-  .main-content {
-    background-color: lightblue;
-    width: 80vw;
-    height: 40vw;
-    width: clamp(800px, 60vw, 1200px);
-    height: clamp(400px, 30vw, 600px);
-    display: flex;
-
-    margin: auto;
-
-    margin: 0;
-
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 0%; //remove to center item
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .main-content > section {
-    flex: 50%;
-  }
-
-  */
-  /*
-//section {
-// width: clamp(400px, 60vw, 600px);
-// height: clamp(400px, 60vw, 600px);
-//}
-
-//not using?
-//.image {
-// width: 30%;
-// height: 100%;
-// background-size: cover;
-// background-position: center;
-// display: flex;
-//flex-direction: column;
-// justify-content: center;
-//  padding: 2rem;
-//}
-
-.text {
-  background-color: $dark-spring-green;
-  //  width: 70%;
-  //  padding: 2rem;
-  //  box-sizing: border-box;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-end;
-  // position: relative;
-}
-//not use above
-*/
 }

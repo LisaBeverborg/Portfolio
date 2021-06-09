@@ -14,11 +14,11 @@ import { map, shareReplay } from 'rxjs/operators';
          
        
         <div class="links-list">
-        <img src="./assets/icons/logo.svg">
-        <a class="sidenav-icon" routerLink=""> <img src="./assets/sidenav-icons/home.png"></a>
-        <a class="sidenav-icon" routerLink="tools"> <img src="./assets/sidenav-icons/backpack.png"></a>
-        <a class="sidenav-icon" routerLink="projects"> <img src="./assets/sidenav-icons/folder.png"></a>
-        <a class="sidenav-icon" routerLink="contact"> <img src="./assets/sidenav-icons/chat.png"></a>
+        <img class="logo" src="./assets/icons/logo.svg" alt="logo">
+        <a class="sidenav-icon" routerLink=""><img width="32" height="32" src="./assets/sidenav-icons/home.png" alt="home page"></a>
+        <a class="sidenav-icon" routerLink="tools"><img width="32" height="32" src="./assets/sidenav-icons/backpack.png" alt="tools page"></a>
+        <a class="sidenav-icon" routerLink="projects"><img  width="32" height="32"src="./assets/sidenav-icons/folder.png" alt="projects page"></a>
+        <a class="sidenav-icon" routerLink="contact"><img  width="32" height="32"src="./assets/sidenav-icons/chat.png" alt="contact page"></a>
         </div>
       </mat-sidenav>
      
@@ -30,21 +30,22 @@ import { map, shareReplay } from 'rxjs/operators';
             aria-label="Toggle sidenav"
             mat-icon-button
             (click)="drawer.toggle()"
-            *ngIf="isHandset$ | async">
-            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            *ngIf="isHandset$ | async"
+            style="margin: 3%;margin-bottom: 0%; border: none;"> 
+            <img aria-label="Side nav toggle icon" src="./assets/icons/menu-64.png" alt="menu button">
           </button>
-        
         </div>
-      
         <ng-content>  
       </ng-content>
-    
-     
       </mat-sidenav-content>
-     
     </mat-sidenav-container>
    `,
   styles: [`
+  .logo{
+    margin-bottom: 30%;
+    max-width: 85%; 
+    height: auto;
+  }
   .sidenav-icon {
     transition: all .2s ease-in-out; 
     cursor:pointer;
@@ -60,18 +61,15 @@ import { map, shareReplay } from 'rxjs/operators';
   .mat-sidenav {
     background: #ececec;
   }
+  .mat-drawer-backdrop .mat-drawer-shown{
+    background-color: rgba(0,0,0,0.6);
+  }
+  .mat-drawer-backdrop.mat-drawer-shown {
+    visibility: visible;
+}
    `]
 })
 
-
-
-/*  <mat-nav-list>
-          <a mat-list-item src="assets/icons/home.png" routerLink=""></a>
-          <a mat-list-item routerLink="tools">Tools</a>
-          <a mat-list-item routerLink="projects">Projects</a>
-          <a mat-list-item routerLink="contact">Contact</a>
-        </mat-nav-list>
-*/
 export class SidenavComponent {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

@@ -28,16 +28,18 @@ import { Component, OnInit } from '@angular/core';
   </form>
 
   </section>
-  <section class="text">
+  <section class="image">
     <h1>Contact me!</h1>
+    <div class="contact-info">
     <p style="font-weight:bold; text-align: center;">lisa.beverborg@gmail.com</p>
     <div class="contact-icons">
-      <a href="https://github.com/LisaBeverborg" target="_blank">
-      <img src="assets/icons/github.png">
+      <a href="https://github.com/LisaBeverborg" target="_blank" rel="noreferrer">
+      <img src="assets/icons/github.png" alt="github icon">
       </a>
-      <a style="margin-left: 10%" href="https://www.linkedin.com/in/lisaoldeluetkebeverborg/" target="_blank">
-      <img src="assets/icons/linkedin.png">
+      <a style="margin-left: 10%" href="https://www.linkedin.com/in/lisaoldeluetkebeverborg/" target="_blank" rel="noreferrer">
+      <img src="assets/icons/linkedin.png" alt="linkedin icon">
       </a>
+    </div>
     </div>
   </section>
   </div>
@@ -88,11 +90,11 @@ import { Component, OnInit } from '@angular/core';
     .form-name label::after {
       content: "";
       position: absolute;
-      left: -1px;
-      bottom: 0px;
+      left: 0px;
+      bottom: -1px;
       height: 100%;
       width: 100%;
-      border-bottom: 2px solid green;
+      border-bottom: 3px solid #839A6A;
       transform: translate(-100%);
       transition: transform 0.3s ease;
     }
@@ -108,7 +110,7 @@ import { Component, OnInit } from '@angular/core';
     .form-name input:valid + .label-name .content-name {
       transform: translateY(-150%);
       font-size: 16px;
-      color: green;
+      color: #839A6A;
     }
     
     .form-name input:focus + .label-name::after {

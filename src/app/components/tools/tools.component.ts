@@ -26,13 +26,10 @@ import { Component, OnInit } from '@angular/core';
         </div>
     </section>
     <section class="image-tools">
-      <img   src="assets/icons/backpack-tools.png">
+      <img width="256" height="256" src="assets/icons/backpack-tools.png" alt="backpack icon">
     </section>
   </div>
   </div>`,
-
-  //show array of tools
-  // <div *ngIf= "tools?.length">
   styles: []
 })
 export class ToolsComponent implements OnInit {
