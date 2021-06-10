@@ -13,7 +13,7 @@ import { Info } from '../../models/info';
   </section>
   <section class="text">
   <p *ngFor="let info of infos" style="font-weight: bold; margin-left:5%">{{info.introduction}}</p>
-  <button class="animated-button">check out projects</button>
+  <button class="animated-button" routerLink="projects">check out projects</button>
   </section>
   </div>
   </div>`,

@@ -32,7 +32,7 @@ import { map, shareReplay } from 'rxjs/operators';
             (click)="drawer.toggle()"
             *ngIf="isHandset$ | async"
             style="margin: 3%;margin-bottom: 0%; border: none;"> 
-            <img aria-label="Side nav toggle icon" src="./assets/icons/menu-64.png" alt="menu button">
+            <img aria-label="Side nav toggle icon" src="./assets/icons/menu-32.png" alt="menu button">
           </button>
         </div>
         <ng-content>  
