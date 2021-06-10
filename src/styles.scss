@@ -72,7 +72,7 @@ body {
 h1 {
   text-align: center;
   font-family: $title-font;
-  font-size: clamp(25px, 2vw, 80px);
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
 }
 
 .animated-button {
@@ -189,14 +189,13 @@ h1 {
   //sidenav
 
   .links-list {
-    height: clamp(500px, 30vw, 700px);
+    height: clamp(350px, 30vw, 900px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    //margin: auto;
     position: relative;
-    top: 32%;
+    top: 33%;
     transform: translate(0, -50%);
   }
 
