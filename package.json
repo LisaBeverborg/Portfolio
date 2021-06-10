@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng run build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "analyze": "webpack-bundle-analyzer docs/stats.json",
     "explore": "source-map-explorer dist/**/*.js"
