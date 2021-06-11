@@ -12,7 +12,7 @@ import { Info } from '../../models/info';
   <img class="home-image" style="border-radius: 50%;" src="assets/img/home-portfolio.jpg" alt="picture Lisa">
   </section>
   <section class="text">
-  <p *ngFor="let info of infos" style="font-weight: bold; margin-left:5%">{{info.introduction}}</p>
+  <p *ngFor="let info of infos" style=" margin-left:5%">{{info.introduction}}</p>
   <button class="animated-button" routerLink="projects">check out projects</button>
   </section>
   </div>

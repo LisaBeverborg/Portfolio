@@ -53,7 +53,7 @@ import { Component, OnInit } from '@angular/core';
 </a>      
 </li>
 </ul>
-<h4 style="text-align:center">check out more projects on my 
+<h4 style="text-align:center; margin-top: 0;">check out more projects on my 
 <a style="text-decoration: none; color: black;  border: 2px solid #839A6A; padding: 5px 10px;
 text-align: center; border-radius: 15px;" href="https://github.com/LisaBeverborg" target="_blank" rel="noreferrer">github</a></h4>
   </section>
