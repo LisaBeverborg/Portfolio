@@ -26,9 +26,7 @@ export class HomeComponent implements OnInit {
   constructor(private infoService: InfoService) { }
   
   ngOnInit() {
-    console.log('on init ran')
     this.infoService.getInfos().subscribe(infos => {
-      console.log(infos);
       this.infos = infos;
     });
   } 
